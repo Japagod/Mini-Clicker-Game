@@ -172,6 +172,9 @@ h1{
     to{top:150%}
 }
 @media (orientation:portrait) {
+    #yee,#yee2{
+        left: 50%;
+    }
     #janela-mercado{
         top: 100%;
         width: 100vw;
