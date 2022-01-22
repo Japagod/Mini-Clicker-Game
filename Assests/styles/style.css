@@ -122,15 +122,15 @@ h1{
     display: flex;
     flex-direction: column;
 }
-.drop{
-    
-    height: 75px;
-    width: 75px;
-    opacity: .5;
+#botao-mercado{
+    height: 50px;
+    width: 50px;
+    display: none;
     position: absolute;
-    left: var(--random-pos);
-    top: -100%;
-    background-color: red;
+    bottom: 10px;
+    left: 10px;
+    filter: invert(10%) sepia(92%) saturate(7448%) hue-rotate(357deg) brightness(99%) contrast(116%);
+    z-index: 6;
 }
 @keyframes click {
     0%{height: 100px;
@@ -162,4 +162,21 @@ h1{
 @keyframes drop{
     from{top: 0vh; transform: rotate(0deg);}
     to{top: 200vh;transform: rotate(-90deg);}
+}
+@keyframes open{
+    from{top:150%}
+    to{top:20%}
+}
+@keyframes close{
+    from{top:20%}
+    to{top:150%}
+}
+@media (orientation:portrait) {
+    #janela-mercado{
+        top: 100%;
+        width: 100vw;
+    }
+    #botao-mercado{
+        display: block;
+    }
 }

@@ -2,15 +2,10 @@ var yee = document.getElementById("yee")
 var text = document.getElementById("text")
 var qnt = 1
 var t= true
-var counter = 0
+let open = false
+var counter = 29
 var c = document.getElementById("mycanvas")
 var ctx = c.getContext("2d")
-var nodes = {
-    node:document.getElementById("drop"),
-    node1:document.getElementById("drop1"),
-    node2:document.getElementById("drop2"),
-    node3:document.getElementById("drop3")
-}
 var items = {
     item1:document.getElementById("item1"),
     item2:document.getElementById("item2"),
@@ -139,25 +134,37 @@ items.item5.addEventListener("mouseup",()=>{
             }           
     }, 1000);
 
-yee.addEventListener("mousedown", e => {
-    yee.style.animation = "1s ease click forwards"
-    document.getElementById("yee2").style.animation = ".1s ease click forwards"
-    counter += qnt
-    ctx.fillStyle = "#121224";
-    ctx.fillRect(0, 0, 300, 150);
-    ctx.font = "30px Arial";
-    ctx.fillStyle = "#fff";
-    ctx.fillText("Seu dinheiro: "+counter.toFixed(1), 10, 75);
+    yee.addEventListener("mousedown", e => {
+        yee.style.animation = "1s ease click forwards"
+        document.getElementById("yee2").style.animation = ".1s ease click forwards"
+        counter += qnt
+        ctx.fillStyle = "#121224";
+        ctx.fillRect(0, 0, 300, 150);
+        ctx.font = "30px Arial";
+        ctx.fillStyle = "#fff";
+        ctx.fillText("Seu dinheiro: "+counter.toFixed(1), 10, 75);
+    })
+    yee.addEventListener("mouseup", e => {
+        document.getElementById("yee2").style.animation = ".32s ease release forwards"
+        yee.style.animation = ".2s ease release forwards"
+        })  
+    function act(){
+        ctx.fillStyle = "#121224";
+        ctx.fillRect(0, 0, 300, 150);
+        ctx.font = "30px Arial";
+        ctx.fillStyle = "#fff";
+        ctx.fillText("Seu dinheiro: "+counter.toFixed(1), 10, 75);
+        }
+        act()
+const btm = document.getElementById("botao-mercado") 
+    btm.addEventListener("click",()=>{
+        if(open == false){
+            document.getElementById("janela-mercado").style.animation = "open .3s forwards ease"
+            console.log(open)
+            open = true
+        }else{
+            document.getElementById("janela-mercado").style.animation = "close .7s forwards ease"
+            console.log(open)
+            open = false
+        }
 })
-yee.addEventListener("mouseup", e => {
-    document.getElementById("yee2").style.animation = ".32s ease release forwards"
-    yee.style.animation = ".2s ease release forwards"
-})
-function act(){
-    ctx.fillStyle = "#121224";
-    ctx.fillRect(0, 0, 300, 150);
-    ctx.font = "30px Arial";
-    ctx.fillStyle = "#fff";
-    ctx.fillText("Seu dinheiro: "+counter.toFixed(1), 10, 75);
-}
-   act()
