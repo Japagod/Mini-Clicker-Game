@@ -1,0 +1,165 @@
+*{
+    margin: 0%;
+    box-sizing: border-box;
+}
+:root{
+    --random-pos:15%;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    overflow: hidden;
+}
+h1{
+    color: whitesmoke;
+}
+#body{
+    width: 75vw;
+    position: absolute;
+    left: 10vw;
+    top: -100%;
+}
+#mycanvas2{
+    position: absolute;
+    top: 6.5%;
+    left: 0%;
+    height: 100vh;
+    width: 100vw;
+    background-color: #121224;
+}
+#mycanvas{
+    border-right: red solid 3px;
+    border-bottom: red solid 3px;
+    border-bottom-right-radius: 5px;
+    padding: 0%;
+    position: absolute;
+    top: 6.5%;
+    left: 0%;
+    height: 100px;
+    width: 200px;
+    background-color: #121224;
+}
+#janela-mercado{
+    width: 200px;
+    height: 90vh;
+    border-right: red solid 3px;
+    border-top: red solid 3px;
+    border-top-right-radius: 5px;
+    background-color: #121224;
+    position: absolute;
+    top: 26.5%;
+}
+#titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    pointer-events: none;
+    user-select: none;
+}
+#conteudo{
+    width: 100%;
+    height: 90%;
+}
+#yee{
+    height: 100px;
+    width: 100px ;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 55%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+#yee2{
+    height: 100px;
+    width: 100px ;
+    background-color: red;
+    display: flex;
+    opacity: .3;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 55%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+#text{
+    color: white;
+    pointer-events: none;
+    user-select: none;
+}
+.items{
+    border-radius: 5px;
+    height: 15%;
+    padding: 5%;
+    overflow: hidden;
+    user-select: none;
+    color: thistle;
+    margin-inline: 3%;
+    pointer-events: all;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+}
+#item1:hover,#item2:hover,#item3:hover,#item4:hover,#item5:hover{
+    color: white;
+    background-color: #242448;
+}
+.niveis{
+    width: 10%;
+    height: 100%;
+    color: red;
+    font-size: 50px;
+    padding-right: 25px;
+    opacity: .3;
+}
+.tides{
+    display: flex;
+    flex-direction: column;
+}
+.drop{
+    
+    height: 75px;
+    width: 75px;
+    opacity: .5;
+    position: absolute;
+    left: var(--random-pos);
+    top: -100%;
+    background-color: red;
+}
+@keyframes click {
+    0%{height: 100px;
+        width: 100px ;}
+    100%{height: 200px;
+        width: 200px ;}
+}
+@keyframes release {
+    0%{height: 200px;
+        width: 200px ;}
+    100%{height: 100px;
+        width: 100px ;}
+}
+@keyframes compra{
+    from{background-color:#242448 ;}
+    50%{background-color:red ;}
+    to{background-color:#111111 ;}
+}
+@keyframes compra-inf{
+    from{background-color:#121224 ;}
+    to{background-color:#121224 ;}
+}
+@keyframes compra-inf-up{
+    from{background-color:#242448;color: whitesmoke;}
+    50%{background-color:red ;color: red;}
+    to{background-color:#121224 ;color: whitesmoke;}
+    
+}
+@keyframes drop{
+    from{top: 0vh; transform: rotate(0deg);}
+    to{top: 200vh;transform: rotate(-90deg);}
+}
