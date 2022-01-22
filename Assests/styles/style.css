@@ -175,6 +175,12 @@ h1{
     #janela-mercado{
         top: 100%;
         width: 100vw;
+        border-left: red solid 3px;
+    }
+    #mycanvas{
+        left: 50%;
+        transform: translate(-50%);
+        border-left: red solid 3px;
     }
     #botao-mercado{
         display: block;
